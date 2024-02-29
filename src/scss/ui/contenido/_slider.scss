@@ -1,0 +1,29 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.slider{
+    overflow: hidden;
+
+    &__slide{
+        height: 100%;
+        flex-shrink: 0;
+        width: 100%;
+        position: relative;
+        transition-property: transform;
+    }
+
+    &__imagen{
+        width: 100%;
+    }
+}
+
+
+
+.swiper-slide{
+    background-position: center;
+    background-size: cover;
+}
+.swiper-slide img{
+    display: block;
+    width: 100%;
+}

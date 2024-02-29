@@ -1,0 +1,40 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer{
+    padding-top: 5rem;
+    &__grid{
+        @include m.tablet {
+            @include m.grid(3, 2rem);
+        }
+    }
+
+    &__widget{
+        text-align: center;
+
+        &:nth-child(3){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__heading{
+        @include m.heading;
+        font-size: 3.4rem;
+    }
+
+    &__texto{
+        line-height: 1.8;
+    }
+
+    &__copyright{
+        text-align: center;
+        max-width: 120rem;
+        margin: 2rem auto 0 auto;
+        border-top: 1px solid darken($color: v.$grisClaro, $amount: 10%);
+        font-size: 1.6rem;
+        padding: 2rem;
+        color: v.$gris;
+    }
+}
